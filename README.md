@@ -19,6 +19,7 @@ The pair lists generated are pairs which have had over 6 months of performance d
  - The config file has the name of the exchange it is meant for, don't try to use it for another exchange, mainly because some coins have different behaviours depending on the exchange and some pairs are not in all main exchanges. With NFI it is also possible that a certain pair A/B will give you profits on Exchange 1, but will give you losses on Exchange 2, so be careful!
 - The list has leveraged (3L) coins included (commented out for your safety) for the *Kucoin* exchange, so keep in mind that these leveraged pairs carry risks! Suggest reading about them before allowing them to the list.
 - I will be reviewing these lists often, might reduce how often depending on many factors (personal availability, exchanges & pairs used, time, etc.).
+- May be seggragate into multiple config files to make the modification or download of the list easier.
 
 ### Discord Link
 
