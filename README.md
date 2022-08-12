@@ -1,77 +1,28 @@
-# NostalgiaForInfinity
-Trading strategy for the [Freqtrade](https://www.freqtrade.io) crypto bot. For backtesting results, check out the comments in the individual [commit](https://github.com/iterativv/NostalgiaForInfinity/commits/main) page.
+# Main Sources & Reference Information to read beforehand
+- Pairlists meant for the [Freqtrade](https://www.freqtrade.io) crypto bot.
+- Strategy's main repository is located here [NFI](https://github.com/iterativv/NostalgiaForInfinity).
 
-## Clone The Repository
-If you plan to only clone the repository to use the strategy, a regular ``git clone`` will do.
+# Curated Static Lists
 
-However, if you plan on running additional strategies or run the test suite, you need to clone
-the repository and it's submodules.
+The pair lists generated are pairs which have had over 6 months of performance data analyzed, based on:
 
-### Newer versions of Git
-
-```bash
-git clone --recurse-submodules https://github.com/iterativv/NostalgiaForInfinity.git checkout-path
-```
-
-### Older versions of Git
-
-```bash
-git clone --recursive https://github.com/iterativv/NostalgiaForInfinity.git checkout-path
-```
-
-### Existing Checkouts
-```
-git submodule update --remote --checkout
-```
-
-
-## Change strategy
-
-Add strategies to the [user_data/strategies](user_data/strategies) folder and also in the [docker-compose.yml](docker-compose.yml) file at `strategy-list` add your strategy in the list.
-
-[Additional Information : NFINext is a older strategy on 5m tf , NFI-NG is a 15m tf stategy abandoned mid development , NFIX is the currently developed strategy (a rework of NG on 5m tf)]
+- Results: by amount of trades & profits given.
+- Chart data: did some Technical Analysis of the pairs at hand on the daily and hourly charts. The 5 and 1 minute charts were used to observe activity on the latest 2 days to avoid "dead in the water" pairs. It was nothing profound ;).
+- Behavioral: this was a more subjective approach, offset from Technical Analysis, I made decisions based on my experience on cryptocurrencies and unwanted patterns that most undesirable pairs have in common and noticed in my experience as an amateur trader.
+- Fundamental Analysis: some pairs might have some sudden situation that makes them undesirable (e.g. LUNA).
+- Other considerations: they are separated by exchange.
+- Type of coin used: **USDT** (and some day in the future I'll make a list for BTC pairs)
 
 ## General Recommendations
 
-For optimal performance, suggested to use between 4 and 6 open trades, with unlimited stake.
-
-A pairlist with 40 to 80 pairs. Volume pairlist works well.
-
-Prefer stable coin (USDT, BUSD etc) pairs, instead of BTC or ETH pairs.
-
-Highly recommended to blacklist leveraged tokens (*BULL, *BEAR, *UP, *DOWN etc).
-
-Ensure that you don't override any variables in you config.json. Especially the timeframe (must be 5m).
-
-* `use_sell_signal` must set to true (or not set at all).
-* `sell_profit_only` must set to false (or not set at all).
-* `ignore_roi_if_buy_signal` must set to true (or not set at all).
-
-## Donations
-
-Absolutely not required. However, will be accepted as a token of appreciation.
-
-* BTC: `bc1qvflsvddkmxh7eqhc4jyu5z5k6xcw3ay8jl49sk`
-* ETH (ERC20): `0x83D3cFb8001BDC5d2211cBeBB8cB3461E5f7Ec91`
-* BEP20/BSC (USDT, ETH, BNB, ...): `0x86A0B21a20b39d16424B7c8003E4A7e12d78ABEe`
-* TRC20/TRON (USDT, TRON, ...): `TTAa9MX6zMLXNgWMhg7tkNormVHWCoq8Xk`
-
-* Patreon : https://www.patreon.com/iterativ
-
-### Referral Links
-
-If you like to help, you can also use the following links to sign up to various exchanges:
-
-* Binance: https://accounts.binance.com/en/register?ref=EAZC47FM (5% discount on fees)
-* Kucoin: https://www.kucoin.com/r/af/QBSSSPYV (5% discount on trading fees)
-* Gate.io: https://www.gate.io/signup/8054544 (10% discount on trading fees)
-* FTX: https://ftx.com/eu/profile#a=100178030 (5% discount on trading fees)
-* OKX: https://www.okx.com/join/11749725760 (5% discount on trading fees)
-* ByBit: https://partner.bybit.com/b/nfi
-* Huobi: https://www.huobi.com/en-us/topic/double-reward/?invite_code=ubpt2223
+ - The stable coin used is **USDT**, don't try to use other stable or whatnot pairs (~~BUSD~~, ~~BTC~~, ~~ETH~~). Of course, you can try using them but many coins might not even have the trading pair of your choice.
+ - The config file has the name of the exchange it is meant for, don't try to use it for another exchange, mainly because some coins have different behaviours depending on the exchange and some pairs are not in all main exchanges. With NFI it is also possible that a certain pair A/B will give you profits on Exchange 1, but will give you losses on Exchange 2, so be careful!
+- The list has leveraged (3L) coins included (commented out for your safety) for the *Kucoin* exchange, so keep in mind that these leveraged pairs carry risks! Suggest reading about them before allowing them to the list.
+- I will be reviewing these lists often, might reduce how often depending on many factors (personal availability, exchanges & pairs used, time, etc.).
 
 ### Discord Link
 
-This is where we chat, hangout and contribute as a community
+Here are the links to the Discord servers so you can chat and share with the community:
 
-* [Discord](https://discord.gg/DeAmv3btxQ)
+* [NFI Discord](https://discord.gg/DeAmv3btxQ)
+* [Freqtrade Discord](https://discord.gg/YSVV29g2AD)
