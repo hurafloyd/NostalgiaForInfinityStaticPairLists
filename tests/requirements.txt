@@ -1,5 +1,0 @@
-freqtrade
-pandas-ta
-pytest
-pytest-mock
-pytest-subtests
