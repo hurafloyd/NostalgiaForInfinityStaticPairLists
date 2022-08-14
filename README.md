@@ -4,7 +4,7 @@
 
 # Curated Static Lists
 
-The pair lists generated are pairs which have had over 6 months of performance data analyzed, based on:
+The pair lists are pairs which have had over 6 months of performance data analyzed, based on:
 
 - Results: by amount of trades & profits given.
 - Chart data: did some Technical Analysis of the pairs at hand on the daily and hourly charts. The 5 and 1 minute charts were used to observe activity on the latest 2 days to avoid "dead in the water" pairs. It was nothing profound ;).
@@ -12,6 +12,8 @@ The pair lists generated are pairs which have had over 6 months of performance d
 - Fundamental Analysis: some pairs might have some sudden situation that makes them undesirable (e.g. LUNA).
 - Other considerations: they are separated by exchange.
 - Type of coin used: **USDT** (and some day in the future I'll make a list for BTC pairs)
+
+Note: Volume WAS NOT a factor to be considered.
 
 ## General Recommendations
 
